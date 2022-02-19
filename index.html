@@ -7,15 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>for lumos</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
         .main {
             background-color: #ffffff;
-            padding: 0;
-            margin: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100%;
             flex-wrap: wrap;
+            height: 100vh;
         }
 
         .des {
@@ -27,6 +30,7 @@
             line-height: 20px;
             overflow: hidden;
             font-style: italic;
+            margin: 5px auto;
         }
 
         .title {
@@ -41,17 +45,44 @@
             box-shadow: -1px 15px 20px 2px #002fa657, inset -2px 2px 5px 1px #0030A6, inset 0px -1px 5px 1px #002fa6a6;
         }
 
-        .forLumos {
-            width: 80%;
+        .forlumos {
             text-align: left;
             font-size: 12px;
+            font-weight: lighter;
+            line-height: 1.5;
         }
 
         .author {
-            margin-top: 50vh;
-            font-size: 10px;
-            width: 100%;
-            text-align: center;
+            margin-top: 10px;
+            border-radius: 1px;
+            font-size: 12px;
+            text-align: start;
+            min-width: 80%;
+        }
+
+        @media screen and (min-width:500px) {
+            .author {
+                min-width: 40%;
+            }
+        }
+
+        .author>div {
+            position: relative;
+            border: 2px dashed #0030A6;
+            border-bottom: transparent;
+            padding: 10px;
+        }
+
+        .author>div:last-child {
+            border-bottom: 2px dashed #0030A6;
+        }
+
+        .date {
+            transform: scale(0.8);
+            opacity: 0.4;
+            position: absolute;
+            right: 1px;
+            bottom: 1px;
         }
     </style>
 </head>
@@ -60,48 +91,49 @@
 
 <body>
     <div class="main">
-        <!-- <div class="title">
+        <div class="title">
             <h2>#0030A6</h2>
         </div>
         <div class="des">
-
             #0030a6, 是中等暗度的蓝色阴影, 没有颜色命名,数据上与国际奇连蓝颜色相近.<br>
             在RGB三原色光模式中由0％的红色, 18.82％的绿色和65.1％的蓝色组成. 在HSL色彩空间里有223度的色调, 100％的饱和度以及33％的亮度. 这种颜色的波长将近467.9纳米.<br>
             这是个没有办法印刷在纸上的颜色
-
-        </div> -->
-        <!-- <div class="forLumos">
-            <div>
-                <p>我收集过无数的蓝, 有克莱因, 有普鲁士.</p>
-                <p>
-                    它是我用CMYK转制印刷的, 即使不完美, 却是我心中最特别的蓝.
-                </p>
-                <p>
-                    它是我平庸青春下的, 无言, 青涩, 无处安放蓝.
-                </p>
-                <p>每个人都有一份<span style="color:#0030A6">#0030A6</span>, 寻找它的命名</p>
-                <p>
-                    如果不幸给它名字的她没出现,
-                </p>
-                <p>
-                    我把它放回大海和天空, 赠予世人.
-                </p>
-                <p>
-                    如果有幸她出现了,
-                </p>
-                <p>
-                    我将这份不可印刷的无名蓝, 具象, 相赠予她.
-                </p>
-                p
-
-            </div> -->
-
-        <!-- </div> -->
-        <div class="author">
-            <s><i style="color:#0030A6">"<b>B</b>ecause <b>L</b>ike <b>U</b> <b>E</b>veryday"</i></s>
-            <p style="font-size: 4px;">till: 2021.12.31</p>
         </div>
-    </div>
+        <div class="des">这里是我的秘密基地, 你姑且不时来看看这个人有没有说什么奇怪的话.</div>
+        <div class="author">
+            <div>
+                <p>希望今年可以把小说写完</p>
+                <p class="date">date: 2022.2.19</p>
+            </div>
+            <div>
+                <i style="color:#0030A6">你好哇, ____.</i>
+                <p class="date">date: 2022.2.01</p>
+            </div>
+            <div>
+                <p>杨, 生日快乐.</p>
+                <p class="date">date: 2022.1.29</p>
+            </div>
+            <div>
+                <i style="color:#0030A6">"<b>B</b>ecause <b>L</b>ike <b>U</b> <b>E</b>veryday"</i>
+                <p class="date">till: 2021.12.31(已失效)</p>
+            </div>
+            <div>
+                <div class="forlumos">
+                    <p><strong>《找蓝》</strong></p>
+                    <p>蓝是可爱的, 蓝是无解的。</p>
+                    <p>作为一个烂漫的人, 有义务去为它作诗。</p>
+                    <p style="margin-top: 5px;">从普罗旺斯码头, 到伊犁小城,</p>
+                    <p>翻过沸腾的山峦, 越过高耸的海洋。</p>
+                    <p>自此有了特殊的代号,</p>
+                    <p>心中特别的蓝啊。</p>
+                    <p style="margin-top: 5px;">我向大海借了一万升蓝</p>
+                    <p>我向天空借了一万升蓝</p>
+                    <p>把它一遍一遍粉刷,</p>
+                    <p>在如珍珠的夜里。</p>
+                </div>
+                <p class="date">date: 2021.12.15</p>
+            </div>
+        </div>
     </div>
 
 </body>
