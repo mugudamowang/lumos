@@ -1,0 +1,103 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.des {
+    border: 3px solid #0030A6;
+    border-radius: 3px;
+    width: 80%;
+    padding: 5px;
+    font-size: 12px;
+    line-height: 20px;
+    overflow: hidden;
+    font-style: italic;
+    margin: 5px auto;
+}
+
+.title {
+    z-index: 10;
+    background-color: ;
+    border-radius: 5%;
+    padding: 10px;
+    margin: 23px 6px;
+    color: white;
+    display: block;
+    background: linear-gradient(25deg, #0030A6 0%, #002fa6ea 70%, #002fa6b0 100%);
+    box-shadow: -1px 15px 20px 2px #002fa657, inset -2px 2px 5px 1px #0030A6, inset 0px -1px 5px 1px #002fa6a6;
+}
+
+.forlumos {
+    text-align: left;
+    font-size: 12px;
+    font-weight: lighter;
+    line-height: 1.5;
+}
+
+.author {
+    margin-top: 10px;
+    border-radius: 1px;
+    font-size: 12px;
+    text-align: start;
+    min-width: 50%;
+    max-width: 80%;
+}
+
+/* 屏幕大于600px */
+@media screen and (min-width:600px) {
+    .author {
+        max-width: 60%;
+    }
+}
+
+.author>div {
+    position: relative;
+    border: 2px dashed #0030A6;
+    border-bottom: transparent;
+    padding: 10px;
+}
+
+.author>div:last-child {
+    border-bottom: 2px dashed #0030A6;
+}
+
+.date {
+    transform: scale(0.8);
+    opacity: 0.4;
+    position: absolute;
+    right: 1px;
+    bottom: 1px;
+}
+
+.autoImage {
+    text-align: center;
+    margin: 1%;
+}
+
+.autoImage>img {
+    max-width: 45%;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+@media screen and (max-width:400px) {
+    .autoImage>img {
+        max-width: 100%;
+    }
+}
+
+.showedImage {
+    width: 10px;
+    position: fixed;
+    background-size: contain;
+}
