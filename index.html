@@ -60,10 +60,11 @@
             min-width: 50%;
             max-width: 80%;
         }
+
         /* 屏幕大于600px */
-        @media screen and (min-width:600px) {   
+        @media screen and (min-width:600px) {
             .author {
-                max-width:60%;
+                max-width: 60%;
             }
         }
 
@@ -85,6 +86,29 @@
             right: 1px;
             bottom: 1px;
         }
+
+        .autoImage {
+            text-align: center;
+            margin: 1%;
+        }
+
+        .autoImage>img {
+            max-width: 45%;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        @media screen and (max-width:400px) {
+            .autoImage>img {
+                max-width: 100%;
+            }
+        }
+
+        .showedImage {
+            width: 10px;
+            position: fixed;
+            background-size: contain;
+        }
     </style>
 </head>
 
@@ -92,6 +116,7 @@
 
 <body>
     <div class="main">
+        <div id="Imageshower" class="showedImage"></div>
         <div class="title">
             <h2>#0030A6</h2>
         </div>
@@ -103,26 +128,43 @@
         <div class="des">姑且不时来看看, 这个人有没有说什么话.</div>
         <div class="author">
             <div>
-                <p>希望今年可以把小说写完</p>
-                <p class="date">date: 2022.2.19</p>
+                <p>
+                    <strong>关于-今天遇到一个叫张德明的人</strong><br>
+                    "哦, 这样就好了, 谢谢你啊!"<br>
+                    "你过一段时间就能看到了"<br>
+                    "好, 谢谢!"<br>
+                </p>
+                <p class="date">date: 2022.2.21</p>
             </div>
             <div>
+                <strong>flag</strong>
+                <p>希望今年可以把小说写完</p>
+                <div class="autoImage">
+                    <img src="https://s2.loli.net/2022/02/21/COBJymdMpcaZX29.jpg" alt="meomo">
+                </div>
+                <p class="date">date: 2022.2.12</p>
+            </div>
+            <div>
+                <strong>memo</strong>
                 <p>你好哇, ____.</p>
+                <p>这里足够安静, 即能让我自渎, 又能让你自渎</p>
                 <p class="date">date: 2022.2.01</p>
             </div>
             <div>
+                <strong>memo</strong>
                 <p>杨, 生日快乐.</p>
                 <p class="date">date: 2022.1.29</p>
             </div>
             <div>
+                <strong>王二</strong>
                 <p>
-                    "人是一种会骗自己的动物. 我们吃了很多无益的苦, 虚掷了不少年华, 所有总有人说, 这些经历是崇高的.""
+                    "人是一种会骗自己的动物. 我们吃了很多无益的苦, 虚掷了不少年华, 所有总有人说, 这些经历是崇高的."
                 </p>
                 <p class="date">date: 2022.1.6</p>
             </div>
             <div>
                 <i style="color:#0030A6">"<b>B</b>ecause <b>L</b>ike <b>U</b> <b>E</b>veryday"</i>
-                <p class="date">till: 2021.12.31(已失效)</p>
+                <p class="date">till: 2021.12.31 overdue</p>
             </div>
             <div>
                 <div class="forlumos">
@@ -144,5 +186,20 @@
     </div>
 
 </body>
+<script>
+    // let img = document.querySelectorAll('img')
+    // let shower = document.querySelector('#Imageshower')
+    // let showedImg = new Image();
+
+    // for (let i = 0; i < img.length; i++) {
+    //     img[i].addEventListener("click", (e) => {
+    //         showedImg.src = e.target.currentSrc;
+    //         shower.appendChild(showedImg);
+    //     })
+    // }
+    // shower.addEventListener('click', function () {
+    //     this.remove();
+    // })
+</script>
 
 </html>
